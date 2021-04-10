@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerCombat : MonoBehaviour
 {
     [SerializeField] Animator animator;
@@ -14,6 +15,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            
             Attack();
         }
     }

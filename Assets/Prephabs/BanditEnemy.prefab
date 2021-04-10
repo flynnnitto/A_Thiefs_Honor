@@ -28,36 +28,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3023991635859537710}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3023991635751560631
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3023991635751560628}
-  m_Layer: 6
-  m_Name: GroundDetection
-  m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3023991635751560628
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3023991635751560631}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 0.24, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3023991635859537710}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3023991635859537682
@@ -74,10 +44,10 @@ GameObject:
   - component: {fileID: 3023991635859537711}
   - component: {fileID: 3023991635859537683}
   - component: {fileID: 3023991635859537708}
-  - component: {fileID: 3023991635859537709}
+  - component: {fileID: -4603827956093701630}
   m_Layer: 6
   m_Name: BanditEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,8 +63,8 @@ Transform:
   m_LocalPosition: {x: 10.2, y: 0.84, z: 0}
   m_LocalScale: {x: 1.9, y: 1.9, z: 1.9}
   m_Children:
-  - {fileID: 3023991635751560628}
   - {fileID: 1834446531}
+  - {fileID: 8263505370338394851}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -231,7 +201,7 @@ MonoBehaviour:
   animator: {fileID: 3023991635859537680}
   bloodEffect: {fileID: 4824625246300122885, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
   IstakingDamage: 0
---- !u!114 &3023991635859537709
+--- !u!114 &-4603827956093701630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,10 +210,83 @@ MonoBehaviour:
   m_GameObject: {fileID: 3023991635859537682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dd937dea53469542956b868c2de7a3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5114eb787cbee1a44845d03b6c0cfda2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  groundDetection: {fileID: 3023991635751560628}
-  animator: {fileID: 3023991635859537680}
-  movement: {x: 0, y: 0}
+  waves:
+  - name: BanditAttack1
+    enemy: {fileID: 3023991635859537710}
+    count: 2
+    rate: 1
+  - name: BanditAttack2
+    enemy: {fileID: 3023991635859537710}
+    count: 3
+    rate: 1.5
+  timebtwWaves: 5
+  waveCountdown: 5
+--- !u!1001 &3483918330343206395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3023991635859537710}
+    m_Modifications:
+    - target: {fileID: 4824625246300122885, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_Name
+      value: BloodEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122887, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.53729963
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.8433915
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+--- !u!4 &8263505370338394851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4824625246300122904, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+  m_PrefabInstance: {fileID: 3483918330343206395}
+  m_PrefabAsset: {fileID: 0}
