@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1834446530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834446531}
+  m_Layer: 6
+  m_Name: Blood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1834446531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834446530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3023991635859537710}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3023991635751560631
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +94,7 @@ Transform:
   m_LocalScale: {x: 1.9, y: 1.9, z: 1.9}
   m_Children:
   - {fileID: 3023991635751560628}
+  - {fileID: 1834446531}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -198,6 +229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   animator: {fileID: 3023991635859537680}
+  bloodEffect: {fileID: 4824625246300122885, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
+  IstakingDamage: 0
 --- !u!114 &3023991635859537709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,3 +246,4 @@ MonoBehaviour:
   speed: 5
   groundDetection: {fileID: 3023991635751560628}
   animator: {fileID: 3023991635859537680}
+  movement: {x: 0, y: 0}

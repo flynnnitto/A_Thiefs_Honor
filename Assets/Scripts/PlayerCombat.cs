@@ -9,7 +9,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackPoint;
     public LayerMask enemyLayers;
     public int attackDamage = 50;
-    public Enemy enemy;
+  
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
@@ -23,9 +23,9 @@ public class PlayerCombat : MonoBehaviour
     {
         animator.SetTrigger("IsAttacking");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach(Collider2D enemy in hitEnemies)
+        for(int i = 0; i< hitEnemies.Length; i++)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            hitEnemies[i].GetComponent<Enemy>().TakeDamage(attackDamage);
             
         }
 

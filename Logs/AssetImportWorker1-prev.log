@@ -207,3 +207,27 @@ Received Import Request.
 Start importing Assets/Prephabs/BanditEnemy.prefab using Guid(b98911ead025183479d5a48596af2d55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22dd4d135a7a44d3dfe501a9a969b26c') in 0.045978 seconds
   Import took 0.048812 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000910 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.851 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1807 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.1 MB.
+System memory in use after: 88.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2283.
+Total: 2.148000 ms (FindLiveObjects: 0.185900 ms CreateObjectMapping: 0.077100 ms MarkObjects: 1.779400 ms  DeleteObjects: 0.104700 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

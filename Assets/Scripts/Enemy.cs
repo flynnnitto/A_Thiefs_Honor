@@ -8,16 +8,29 @@ public class Enemy : MonoBehaviour
     public int MaxHealth = 100;
     private int currentHealth;
     public Animator animator;
+    public GameObject bloodEffect;
+    public bool IstakingDamage = false;
     void Start()
     {
         currentHealth = MaxHealth;
     }
 
+    private void FixedUpdate()
+    {
+        if(currentHealth<=0)
+        {
+            Destroy(gameObject);
+        }
+
+       
+    }
     public void TakeDamage(int damage)
     {
-        animator.SetTrigger("Hurt");
-        currentHealth -= damage;
+        //animator.SetTrigger("Hurt");
+        IstakingDamage = true;
         
+        currentHealth -= damage;
+        Debug.Log("Enemy hit");
 
         if(currentHealth <= 0)
         {
@@ -27,11 +40,10 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        animator.SetBool("IsDead", true);
-        Debug.Log("hit enemy");
+
+        Instantiate(bloodEffect, transform.position, Quaternion.identity);
+        Debug.Log("Ded enemy");
         
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
 
     }
 
