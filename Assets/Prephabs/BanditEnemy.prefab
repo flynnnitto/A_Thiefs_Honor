@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 3023991635859537711}
   - component: {fileID: 3023991635859537683}
   - component: {fileID: 3023991635859537708}
-  - component: {fileID: -4603827956093701630}
   m_Layer: 6
   m_Name: BanditEnemy
   m_TagString: Enemy
@@ -201,29 +200,6 @@ MonoBehaviour:
   animator: {fileID: 3023991635859537680}
   bloodEffect: {fileID: 4824625246300122885, guid: cdd99be03229a6543a93bc95bf0badc0, type: 3}
   IstakingDamage: 0
---- !u!114 &-4603827956093701630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3023991635859537682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5114eb787cbee1a44845d03b6c0cfda2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - name: BanditAttack1
-    enemy: {fileID: 3023991635859537710}
-    count: 2
-    rate: 1
-  - name: BanditAttack2
-    enemy: {fileID: 3023991635859537710}
-    count: 3
-    rate: 1.5
-  timebtwWaves: 5
-  waveCountdown: 5
 --- !u!1001 &3483918330343206395
 PrefabInstance:
   m_ObjectHideFlags: 0
